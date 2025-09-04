@@ -5,38 +5,72 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: red;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.test-nupp {
+  background-color: green;
+  color: grey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.test-nupp:hover {
+  height: 100px;
 }
 
-.card {
-  padding: 2em;
+.test-nupp:active {
+  cursor: grab;
 }
 
-.read-the-docs {
-  color: #888;
+.sinine-tekst {
+  font-style: italic;
+  color: blue;
+}
+
+.sinine-tekst:hover {
+  font-size: 24px;
+}
+
+.roheline-tekst {
+  font-weight: bold;
+  color: green;
+  border: 2px solid red;
+}
+
+.roheline-tekst:hover {
+  border: 2px solid brown;
+}
+
+.motika-pilt {
+  width: 200px;
+  margin-left: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.motika-pilt:hover {
+  border-radius: 12px;
+}
+
+.motika-pilt:active {
+  opacity: 50%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color: black;
+  margin-bottom: 100px;
+}
+
+td,
+th {
+  border: 1px solid #333;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
