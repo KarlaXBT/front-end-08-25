@@ -4,7 +4,7 @@ function Meist() {
   const [kontakt, n2itaKontakt] = useState("");
   return (
     <div>
-      <div>See on meist leht, nähtav localhost:3000/meist aadressil</div>
+      <div>See on meist leht, nähtav localhost:5173/meist aadressil</div>
       <div>Meie töötajad:</div>
       <br />
       <div>Arvo Pärt</div>
