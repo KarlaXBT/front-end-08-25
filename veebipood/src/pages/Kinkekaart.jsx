@@ -31,9 +31,24 @@ function Kinkekaart() {
   }
   return (
     <div>
-      <button onClick={() => setSumma(20)}>20 €</button>
-      <button onClick={() => setSumma(50)}>50 €</button>
-      <button onClick={() => setSumma(100)}>100 €</button>
+      <button
+        className={summa === 20 ? "summa-aktiivne" : undefined}
+        onClick={() => setSumma(20)}
+      >
+        20 €
+      </button>
+      <button
+        className={summa === 50 ? "summa-aktiivne" : undefined}
+        onClick={() => setSumma(50)}
+      >
+        50 €
+      </button>
+      <button
+        className={summa === 100 ? "summa-aktiivne" : undefined}
+        onClick={() => setSumma(100)}
+      >
+        100 €
+      </button>
       <br />
       <br />
       <div>Kinkekaart: {summa} €</div>

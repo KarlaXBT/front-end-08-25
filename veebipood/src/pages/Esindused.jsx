@@ -4,10 +4,30 @@ function Esindused() {
   const [linn, setLinn] = useState("Tallinn");
   return (
     <div>
-      <button onClick={() => setLinn("Tallinn")}>Tallinn (6)</button>
-      <button onClick={() => setLinn("Tartu")}>Tartu (2)</button>
-      <button onClick={() => setLinn("Narva")}>Narva (2)</button>
-      <button onClick={() => setLinn("Pärnu")}>Pärnu (1)</button>
+      <button
+        className={linn === "Tallinn" ? "esindus-aktiivne" : undefined}
+        onClick={() => setLinn("Tallinn")}
+      >
+        Tallinn (6)
+      </button>
+      <button
+        className={linn === "Tartu" ? "esindus-aktiivne" : undefined}
+        onClick={() => setLinn("Tartu")}
+      >
+        Tartu (2)
+      </button>
+      <button
+        className={linn === "Narva" ? "esindus-aktiivne" : undefined}
+        onClick={() => setLinn("Narva")}
+      >
+        Narva (2)
+      </button>
+      <button
+        className={linn === "Pärnu" ? "esindus-aktiivne" : undefined}
+        onClick={() => setLinn("Pärnu")}
+      >
+        Pärnu (1)
+      </button>
       <br />
       <br />
       {linn === "Tallinn" && (

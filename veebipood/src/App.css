@@ -18,3 +18,21 @@
 .pilt:active {
   transform: scale(90%);
 }
+
+.summa-aktiivne {
+  color: pink;
+  border: 1px solid pink;
+}
+
+.esindus-aktiivne {
+  text-decoration: underline;
+  color: pink;
+}
+
+.keel-aktiivne {
+  font-weight: bold;
+}
+
+.nupp {
+  background-color: beige;
+}

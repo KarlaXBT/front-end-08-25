@@ -10,6 +10,7 @@ function MaksimaalneKalkulaator() {
     const ylalpeetavadKulu = parseInt(ylalpeetavadRef.current.value) * 200;
     const netoTulu = parseFloat(netoRef.current.value) || 0;
     const kohustused = parseFloat(kohustusedRef.current.value) || 0;
+
     if (netoTulu === 0) {
       alert("Netotulu ei saa olla 0 €!");
       setMaxLaen(0);
@@ -17,7 +18,6 @@ function MaksimaalneKalkulaator() {
     }
 
     const vabaRaha = netoTulu - ylalpeetavadKulu - kohustused;
-
     const maksimaalneLaen = Math.max(vabaRaha * 0.5 * 120);
     setMaxLaen(maksimaalneLaen.toFixed(2));
   }

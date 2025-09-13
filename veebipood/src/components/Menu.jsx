@@ -27,6 +27,9 @@ function Menu() {
       <Link to="/kalkulaator">
         <button>Kalkulaator</button>
       </Link>
+      <Link to="/arrays-home">
+        <button>Arrays</button>
+      </Link>
     </div>
   );
 }
