@@ -8,12 +8,32 @@ function Courses() {
       <Link to="/">
         <button>Tagasi</button>
       </Link>
-      <button onClick={() => uuendaKursus("udemy")}>Udemy</button>
-      <button onClick={() => uuendaKursus("coursera")}>Coursera</button>
-      <button onClick={() => uuendaKursus("codecademy")}>Codecademy</button>
-      <button onClick={() => uuendaKursus("udacity")}>Udacity</button>
+      <button
+        className={kursus === "udemy" ? "aktiivne" : undefined}
+        onClick={() => uuendaKursus("udemy")}
+      >
+        Udemy
+      </button>
+      <button
+        className={kursus === "coursera" ? "aktiivne" : undefined}
+        onClick={() => uuendaKursus("coursera")}
+      >
+        Coursera
+      </button>
+      <button
+        className={kursus === "codecademy" ? "aktiivne" : undefined}
+        onClick={() => uuendaKursus("codecademy")}
+      >
+        Codecademy
+      </button>
+      <button
+        className={kursus === "udacity" ? "aktiivne" : undefined}
+        onClick={() => uuendaKursus("udacity")}
+      >
+        Udacity
+      </button>
       {kursus === "udemy" && (
-        <div>Siin on kirjeldus (loend) {kursus}.conm läbitud kursustest</div>
+        <div>Siin on kirjeldus (loend) {kursus}.com läbitud kursustest</div>
       )}
       {kursus === "coursera" && (
         <div>Siin on kirjeldus (loend) {kursus}.com läbitud kursustest</div>
