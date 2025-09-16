@@ -18,9 +18,7 @@ function Menu() {
       <Link to="/seaded">
         <button>Seaded</button>
       </Link>
-      <Link to="/esindused">
-        <button>Esindused</button>
-      </Link>
+
       <Link to="/osta-kinkekaart">
         <button>Kinkekaardid</button>
       </Link>
@@ -29,6 +27,9 @@ function Menu() {
       </Link>
       <Link to="/arrays-home">
         <button>Arrays</button>
+      </Link>
+      <Link to="/halda-home">
+        <button>Halda</button>
       </Link>
     </div>
   );

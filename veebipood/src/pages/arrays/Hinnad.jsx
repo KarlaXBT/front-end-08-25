@@ -1,12 +1,11 @@
 import { useState } from "react";
+import hinnadFailist from "../../data/hinnad.json";
 
 function Hinnad() {
-  const [hinnad, setHinnad] = useState([
-    5, 12, 899, 20, 3000, 17, 9, 14, 123, 11,
-  ]);
+  const [hinnad, setHinnad] = useState(hinnadFailist);
 
   function sorteeriKasvavalt() {
-    hinnad.sort((a, b) => a - b);
+    hinnad.sort((a, b) => a.arv - b.arv);
     setHinnad(hinnad.slice());
 
     // const vastus2 = hinnad.toSorted((a, b) => a - b);
@@ -17,16 +16,16 @@ function Hinnad() {
     // hinnad.sort((a, b) => a - b);
     // setHinnad(hinnad.slice());
 
-    const vastus2 = hinnad.toSorted((a, b) => b - a);
+    const vastus2 = hinnad.toSorted((a, b) => b.arv - a.arv);
     setHinnad(vastus2);
   }
 
   function filtreeriSuuremadKui10() {
-    const vastus = hinnad.filter((item) => item > 10);
+    const vastus = hinnad.filter((item) => item.arv > 10);
     setHinnad(vastus);
   }
   function filtreeriVaiksemadKui100() {
-    const vastus = hinnad.filter((item) => item < 100);
+    const vastus = hinnad.filter((item) => item.arv < 100);
     setHinnad(vastus);
   }
   return (
@@ -37,7 +36,7 @@ function Hinnad() {
       <button onClick={filtreeriVaiksemadKui100}>Viksemad kui 100</button>
 
       {hinnad.map((item) => (
-        <div key={item}>{item}</div>
+        <div key={item.arv}>{item.arv}</div>
       ))}
     </div>
   );

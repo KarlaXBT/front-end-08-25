@@ -1,0 +1,12 @@
+[
+  { "arv": 5, "sonana": "viis" },
+  { "arv": 12, "sonana": "kaksteist" },
+  { "arv": 899, "sonana": "kaheksasada üheksakümmend üheksa" },
+  { "arv": 20, "sonana": "kakskümmend" },
+  { "arv": 3000, "sonana": "kolm tuhat" },
+  { "arv": 17, "sonana": "seitseteist" },
+  { "arv": 9, "sonana": "üheksa" },
+  { "arv": 14, "sonana": "neliteist" },
+  { "arv": 123, "sonana": "ükssada kakskümmend kolm" },
+  { "arv": 11, "sonana": "üksteist" }
+]

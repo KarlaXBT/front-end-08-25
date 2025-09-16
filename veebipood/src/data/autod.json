@@ -1,0 +1,13 @@
+[
+  { "nimi": "Audi", "hind": 40230, "aktiivne": true, "pilt": "" },
+  { "nimi": "BMW", "hind": 28177, "aktiivne": false, "pilt": "" },
+  { "nimi": "Mercedes", "hind": 52894, "aktiivne": true, "pilt": "" },
+  { "nimi": "Toyota", "hind": 15238, "aktiivne": false, "pilt": "" },
+  { "nimi": "Honda", "hind": 43982, "aktiivne": true, "pilt": "" },
+  { "nimi": "Ford", "hind": 17490, "aktiivne": false, "pilt": "" },
+  { "nimi": "Chevrolet", "hind": 38764, "aktiivne": true, "pilt": "" },
+  { "nimi": "Volkswagen", "hind": 55912, "aktiivne": false, "pilt": "" },
+  { "nimi": "Hyundai", "hind": 24288, "aktiivne": true, "pilt": "" },
+  { "nimi": "Kia", "hind": 58330, "aktiivne": false, "pilt": "" },
+  { "nimi": "Ferrari", "hind": 147991, "aktiivne": true, "pilt": "" }
+]

@@ -22,7 +22,8 @@ createRoot(document.getElementById("root")).render(
 //2. N 28.08 - tsüklid, objektid
 //3. E 01.09 - React algus, navigeerimine
 //4. R 05.09 - useState
-//5. E 08.09 -
-//6. R 12.09 -
-//7. E 15.09 -
+//5. E 08.09 - kalkulaator, onChange, useRef
+//6. R 12.09 - arrays
+//7. E 15.09 - lisamine, kustuamine, tabel, faili tõstmine, objektid
 //8. K 17.09 -
+//9. K

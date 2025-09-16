@@ -18,6 +18,9 @@ function ArraysHome() {
       <Link to="/tooted">
         <button className="nupp">Tooted</button>
       </Link>
+      <Link to="/esindused">
+        <button className="nupp">Esindused</button>
+      </Link>
     </div>
   );
 }

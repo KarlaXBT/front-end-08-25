@@ -1,7 +1,19 @@
 import { useState } from "react";
+import keskusedFailist from "../../data/esindused.json";
 
 function Esindused() {
   const [linn, setLinn] = useState("Tallinn");
+  const [keskused, setKeskused] = useState(keskusedFailist);
+
+  function sorteeriAZ() {
+    keskused.sort((a, b) => a.keskus.localeCompare(b.keskus));
+    setKeskused([...keskused]);
+  }
+
+  function sorteeriZA() {
+    keskused.sort((a, b) => b.keskus.localeCompare(a.keskus));
+    setKeskused([...keskused]);
+  }
   return (
     <div>
       <button
@@ -32,12 +44,11 @@ function Esindused() {
       <br />
       {linn === "Tallinn" && (
         <>
-          <div>Ülemiste</div>
-          <div>Kristiine</div>
-          <div>Rocca al Mare</div>
-          <div>Vesse</div>
-          <div>Järveotsa</div>
-          <div>Viru Keskus</div>
+          <button onClick={sorteeriAZ}>SorteeriAZ</button>
+          <button onClick={sorteeriZA}>SorteeriZA</button>
+          {keskused.map((item) => (
+            <div key={item.keskus}>{item.keskus}</div>
+          ))}
         </>
       )}
       {linn === "Tartu" && (
