@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "eesnimi": "Mari",
+    "perenimi": "Tamm",
+    "amet": "Projektijuht",
+    "osakond": "IT",
+    "palk": 2800,
+    "tootav": true
+  },
+  {
+    "id": 2,
+    "eesnimi": "Jaan",
+    "perenimi": "Kask",
+    "amet": "Arendaja",
+    "osakond": "IT",
+    "palk": 3200,
+    "tootav": true
+  },
+  {
+    "id": 3,
+    "eesnimi": "Kadri",
+    "perenimi": "Mets",
+    "amet": "Disainer",
+    "osakond": "Turundus",
+    "palk": 2400,
+    "tootav": true
+  },
+  {
+    "id": 4,
+    "eesnimi": "Peeter",
+    "perenimi": "Saar",
+    "amet": "Raamatupidaja",
+    "osakond": "Finants",
+    "palk": 2600,
+    "tootav": false
+  },
+  {
+    "id": 5,
+    "eesnimi": "Annika",
+    "perenimi": "Lepik",
+    "amet": "Personalijuht",
+    "osakond": "HR",
+    "palk": 3000,
+    "tootav": true
+  }
+]

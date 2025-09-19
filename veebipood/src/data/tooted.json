@@ -1,0 +1,12 @@
+[
+  { "nimi": "Leib", "kogus": 2, "hind": 1.5, "ostetud": false },
+  { "nimi": "Piim", "kogus": 1, "hind": 0.9, "ostetud": true },
+  { "nimi": "Õunad", "kogus": 6, "hind": 0.3, "ostetud": false },
+  { "nimi": "Juust", "kogus": 1, "hind": 2.5, "ostetud": false },
+  { "nimi": "Kanafilee", "kogus": 2, "hind": 5.0, "ostetud": true },
+  { "nimi": "Krõpsud", "kogus": 1, "hind": 1.2, "ostetud": false },
+  { "nimi": "Munad", "kogus": 12, "hind": 2.0, "ostetud": false },
+  { "nimi": "Banaanid", "kogus": 5, "hind": 0.25, "ostetud": true },
+  { "nimi": "Tomatid", "kogus": 4, "hind": 0.8, "ostetud": false },
+  { "nimi": "Jogurt", "kogus": 3, "hind": 0.7, "ostetud": true }
+]
