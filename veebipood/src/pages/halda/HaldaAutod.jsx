@@ -1,5 +1,6 @@
 import { useState } from "react";
 import autodAndmeBaasist from "../../data/autod.json";
+import { Link } from "react-router-dom";
 
 function HaldaAutod() {
   // state tabeli jaoks
@@ -61,6 +62,11 @@ function HaldaAutod() {
               <td>{item.aktiivne ? "aktiivne" : "mitteaktiivne"}</td>
               <td>
                 <button onClick={() => kustuta(index)}>X</button>
+              </td>
+              <td>
+                <Link to={"/muuda-autod/" + index}>
+                  <button>Muuda</button>
+                </Link>
               </td>
             </tr>
           ))}

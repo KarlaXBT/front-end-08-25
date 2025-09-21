@@ -1,5 +1,6 @@
 import { useState } from "react";
 import hinnadFailist from "../../data/hinnad.json";
+import { Link } from "react-router-dom";
 
 function Hinnad() {
   const [hinnad, setHinnad] = useState(hinnadFailist);
@@ -35,8 +36,13 @@ function Hinnad() {
       <button onClick={filtreeriSuuremadKui10}>Suuremad kui 10</button>
       <button onClick={filtreeriVaiksemadKui100}>Viksemad kui 100</button>
 
-      {hinnad.map((item) => (
-        <div key={item.arv}>{item.arv}</div>
+      {hinnad.map((item, index) => (
+        <div key={item.arv}>
+          {item.arv}
+          <Link to={"/hind/" + index}>
+            <button>Vt lähemalt</button>
+          </Link>
+        </div>
       ))}
     </div>
   );

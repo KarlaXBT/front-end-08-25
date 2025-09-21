@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // import .json failist
 import tootajadFailist from "../../data/tootajad.json";
@@ -78,6 +79,11 @@ function HaldaTootajad() {
               </td>
               <td>
                 <button onClick={() => kustuta(index)}> X</button>
+              </td>
+              <td>
+                <Link to={"/muuda-tootajad/" + index}>
+                  <button>Muuda</button>
+                </Link>
               </td>
             </tr>
           ))}

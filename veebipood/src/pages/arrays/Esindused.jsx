@@ -1,5 +1,6 @@
 import { useState } from "react";
 import keskusedFailist from "../../data/esindused.json";
+import { Link } from "react-router-dom";
 
 function Esindused() {
   const [linn, setLinn] = useState("Tallinn");
@@ -47,7 +48,10 @@ function Esindused() {
           <button onClick={sorteeriAZ}>SorteeriAZ</button>
           <button onClick={sorteeriZA}>SorteeriZA</button>
           {keskused.map((item) => (
-            <div key={item.keskus}>{item.keskus}</div>
+            <div key={item.keskus}>
+              {item.keskus}
+              <Link to={"/esindus/" + item.keskus}>Vt lähemalt</Link>
+            </div>
           ))}
         </>
       )}

@@ -25,5 +25,5 @@ createRoot(document.getElementById("root")).render(
 //5. E 08.09 - kalkulaator, onChange, useRef
 //6. R 12.09 - arrays
 //7. E 15.09 - lisamine, kustuamine, tabel, faili tõstmine, objektid
-//8. K 17.09 -
-//9. K
+//8. R 19.09 - useParams, useNavigate,
+//9. E 21.09 -

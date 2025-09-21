@@ -1,19 +1,6 @@
 import { useState } from "react";
 import autodAndmeBaasist from "../../data/autod.json";
-
-// const autodAndmeBaasist = [
-//   "Audi",
-//   "BMW",
-//   "Mercedes",
-//   "Toyota",
-//   "Honda",
-//   "Ford",
-//   "Chevrolet",
-//   "Volkswagen",
-//   "Hyundai",
-//   "Kia",
-//   "Ferrari",
-// ];
+import { Link } from "react-router-dom";
 
 function Autod() {
   const [autod, setAutod] = useState(autodAndmeBaasist);
@@ -85,7 +72,15 @@ function Autod() {
       <button onClick={filtreeri7Tahelised}>Täpselt 7</button>
       <button onClick={filtreeriRohkemKui6Tahelised}>6+ tähte</button>
       {autod.map((item) => (
-        <div key={item}>{item.nimi}</div>
+        <div key={item.nimi}>
+          {item.nimi}
+          {/* kui kaldkriipsu pole siis liidab praeguseöe URL-le juurde
+localhost:5072/autod  + auto  =  localhost:5072/autod/auto tuleb notfound leht sest
+sellist URL ei ole */}
+          <Link to={"/auto/" + item.nimi}>
+            <button>Vt lähemalt</button>
+          </Link>
+        </div>
       ))}
     </div>
   );

@@ -1,68 +1,84 @@
 import { useState } from "react";
+import tootajadFailist from "../../data/tootajad.json";
+import { Link } from "react-router-dom";
 
 function Tootajad() {
-  const originaalTootajad = [
-    "Charlie",
-    "Fiona",
-    "Julia",
-    "Diana",
-    "Bob",
-    "George",
-    "Alice",
-    "Hannah",
-    "Ethan",
-    "Mark",
-    "Ivan",
-  ];
-  const [tootajad, setTootajad] = useState(originaalTootajad);
+  // const tootajadFailist = [
+  //   "Charlie",
+  //   "Fiona",
+  //   "Julia",
+  //   "Diana",
+  //   "Bob",
+  //   "George",
+  //   "Alice",
+  //   "Hannah",
+  //   "Ethan",
+  //   "Mark",
+  //   "Ivan",
+  // ];
+  const [tootajad, setTootajad] = useState(tootajadFailist);
 
   function sorteeriAZ() {
-    setTootajad([...originaalTootajad].sort((a, b) => a.localeCompare(b)));
+    setTootajad(
+      [...tootajadFailist].sort((a, b) => a.eesnimi.localeCompare(b.eesnimi))
+    );
   }
 
   function sorteeriZA() {
-    setTootajad([...originaalTootajad].sort((a, b) => b.localeCompare(a)));
+    setTootajad(
+      [...tootajadFailist].sort((a, b) => b.eesnimi.localeCompare(a.eesnimi))
+    );
   }
 
   function tahedKasvavalt() {
-    setTootajad([...originaalTootajad].sort((a, b) => a.length - b.length));
+    setTootajad(
+      [...tootajadFailist].sort((a, b) => a.eesnimi.length - b.eesnimi.length)
+    );
   }
   function tahedKahanevalt() {
-    setTootajad([...originaalTootajad].sort((a, b) => b.length - a.length));
+    setTootajad(
+      [...tootajadFailist].sort((a, b) => b.eesnimi.length - a.eesnimi.length)
+    );
   }
 
   function teineTahtAZ() {
     setTootajad(
-      [...originaalTootajad].sort((a, b) => a[1].localeCompare(b[1]))
+      [...tootajadFailist].sort((a, b) =>
+        a.eesnimi[1].localeCompare(b.eesnimi[1])
+      )
     );
   }
 
   function kolmeTahelised() {
-    setTootajad(originaalTootajad.filter((item) => item.length === 3));
+    setTootajad(tootajadFailist.filter((item) => item.eesnimi.length === 3));
   }
 
   function rohkemKuiViis() {
-    setTootajad(originaalTootajad.filter((item) => item.length > 5));
+    setTootajad(tootajadFailist.filter((item) => item.eesnimi.length > 5));
   }
 
   function algabMTahega() {
     setTootajad(
-      originaalTootajad.filter((item) => item[0].toUpperCase() === "M")
+      tootajadFailist.filter((item) => item.eesnimi[0].toUpperCase() === "M")
     );
   }
 
   function neljasTahtI() {
     setTootajad(
-      originaalTootajad.filter((item) => item.length > 3 && item[3] === "i")
+      tootajadFailist.filter(
+        (item) => item.eenimi.length > 3 && item.eenimi[3] === "i"
+      )
     );
   }
 
   function sisaldabAI() {
-    setTootajad(originaalTootajad.filter((item) => item.includes("ia")));
+    setTootajad(tootajadFailist.filter((item) => item.eesnimi.includes("ia")));
   }
 
   function paarisArvTahti() {
-    setTootajad(originaalTootajad.filter((item) => item.length % 2 === 0));
+    setTootajad(
+      tootajadFailist.filter((item) => item.eesnimi.length % 2 === 0)
+    );
   }
 
   return (
@@ -78,8 +94,13 @@ function Tootajad() {
       <button onClick={neljasTahtI}>Neljas täht i</button>
       <button onClick={sisaldabAI}>Sisaldab ia</button>
       <button onClick={paarisArvTahti}>Paarisarv tähti</button>
-      {tootajad.map((item) => (
-        <div key={item}>{item}</div>
+      {tootajad.map((item, index) => (
+        <div key={item.eesnimi}>
+          {item.eesnimi}
+          <Link to={"/tootaja/" + index}>
+            <button>Vaata lähemalt</button>
+          </Link>
+        </div>
       ))}
     </div>
   );

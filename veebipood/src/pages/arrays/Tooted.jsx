@@ -1,32 +1,20 @@
 import { useState } from "react";
+import tootedFailist from "../../data/tooted.json";
+import { Link } from "react-router-dom";
 
 function Tooted() {
-  // loome "originaal" massiivi mida ei muuda
-  const originaalTooted = [
-    "Coca-Cola",
-    "Pepsi",
-    "Fanta",
-    "Sprite",
-    "Mountain Dew",
-    "Dr Pepper",
-    "7 Up",
-    "Mirinda",
-    "Root Beer",
-    "Ginger Ale",
-    "Whiskey",
-  ];
   // useState  et muutustel re renderdada,
-  const [tooted, setTooted] = useState(originaalTooted);
+  const [tooted, setTooted] = useState(tootedFailist);
   // funktsioon mis sorteerib tähestiku järjekorras, loome "pealiskaudse koopia originaal massiivist"
   // kasutame sort meetodit mis võrdleb callback funktsiooni alusel
 
   // sortimis funktsioon
   function sortBy(compareFn) {
-    setTooted([...originaalTooted].sort(compareFn));
+    setTooted([...tootedFailist].sort(compareFn));
   }
   // filtreerimis funktsioon
   function filterBy(compareFn) {
-    setTooted(originaalTooted.filter(compareFn));
+    setTooted(tootedFailist.filter(compareFn));
   }
   return (
     <div>
@@ -63,8 +51,13 @@ function Tooted() {
         Paaris arv tähti
       </button>
 
-      {tooted.map((item) => (
-        <div key={item}>{item}</div>
+      {tooted.map((item, index) => (
+        <div key={item.nimi}>
+          {item.nimi}
+          <Link to={"/toode/" + index}>
+            <button>Vt lähemalt</button>
+          </Link>
+        </div>
       ))}
     </div>
   );
