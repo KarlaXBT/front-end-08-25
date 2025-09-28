@@ -4,6 +4,8 @@ import Avaleht from "./pages/Avaleht";
 import Uudised from "./pages/Uudised";
 import Kontakt from "./pages/Kontakt";
 import Meist from "./pages/Meist";
+import KasutajaPostitus from "./pages/KasutajaPostitus";
+import YksPostitus from "./pages/YksPostitus";
 
 function App() {
   return (
@@ -25,6 +27,11 @@ function App() {
         <Route path="uudised" element={<Uudised />} />
         <Route path="kontakt" element={<Kontakt />} />
         <Route path="meist" element={<Meist />} />
+        <Route
+          path="kasutaja-postitus/:kasutajaId"
+          element={<KasutajaPostitus />}
+        />
+        <Route path="vaata-postitus/:postituseId" element={<YksPostitus />} />
       </Routes>
     </>
   );
